@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ucapan Ulang Tahun</title>
+  <style>
+    body {
+      background-color: #ffd1dc;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      position: relative; /* Added for positioning */
+    }
+
+    .container {
+      background-color: #e98db5;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative; /* Added for positioning */
+      z-index: 1; /* Ensure it is above the photo slots */
+    }
+
+    h1 {
+      color: #030303;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      font-size: 24px;
+      color: #030303;
+      margin-bottom: 30px;
+    }
+
+    .container img {
+      width: 250px; /* Adjust size as needed */
+      height: 380px; /* Adjust size as needed */
+      border: 2px solid #333; /* Frame around the photo */
+      border-radius: 10px; /* Rounded corners for the frame */
+      object-fit: cover;
+    }
+    .photo-slot {
+  width: 180px; /* Perbesar jika perlu */
+  height: 200px; /* Perbesar jika perlu */
+  overflow: hidden; /* Mencegah gambar keluar dari batas */
+  position: absolute;
+  border: 2px solid #333; /* Frame around the photo */
+  border-radius: 10px; /* Rounded corners for the frame */
+}
+
+.photo-slot img {
+  width: 100%; /* Membuat gambar memenuhi slot */
+  height: 100%; /* Membuat gambar memenuhi slot */
+  object-fit: cover; /* Memastikan gambar terisi tanpa distorsi */
+}
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap; /* Agar foto turun ke bawah jika tidak muat dalam satu baris */
+  justify-content: center; /* Pusatkan foto di dalam container */
+  gap: 10px; /* Beri jarak antar foto */
+  margin-top: 20px; /* Beri jarak dari foto utama */
+}
+
+.image-gallery img {
+  width: 120px; /* Sesuaikan ukuran */
+  height: 150px;
+  object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+  border-radius: 10px; /* Beri efek rounded pada foto */
+  border: 2px solid #333; /* Tambahkan border agar terlihat rapi */
+}
+
+.gif-container {
+    position: absolute;
+    width: 120px; /* Sesuaikan ukuran GIF */
+    height: 250px;
+  }
+
+  .gif-left {
+    left: 50px; /* Sesuaikan posisi di kiri */
+    top: 60%;
+    transform: translateY(-50%);
+  }
+
+  .gif-right {
+    right: 120px; /* Sesuaikan posisi di kanan */
+    top: 60%;
+    transform: translateY(-50%);
+  }
+
+  .gif-container img {
+    width: 150%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+    /* Positioning the photo slots around the container */
+    .slot1 { top: 10px; left: 60px; }
+    .slot2 { top: 10px; right: 60px; }
+    .slot3 { bottom: 10px; left: 60px; }
+    .slot4 { bottom: 10px; right: 60px; }
+    .slot5 { top: 50%; left: 60px; transform: translateY(-50%); }
+    .slot6 { top: 50%; right: 60px; transform: translateY(-50%); }
+    .slot7 { bottom: 50%; left: 50%; transform: translate(-50%, 50%); }
+    .slot8 { bottom: 50%; right: 50%; transform: translate(50%, 50%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <style>
+      #typing-text {
+        font-size: 24px;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid black; /* Efek kursor kedip */
+        display: inline-block;
+      }
+    </style>
+    
+    <h1 id="typing-text"></h1> <!-- Elemen untuk teks yang diketik -->
+    
+    <script>
+      const text = "Happy Birthdayyy BEBEEE! 🤍🤍🤍"; // Ubah teks sesuai keinginan
+      let index = 0;
+      const speed = 100; // Kecepatan ketikan (ms)
+    
+      function typeEffect() {
+        if (index < text.length) {
+          document.getElementById("typing-text").innerHTML += text.charAt(index);
+          index++;
+          setTimeout(typeEffect, speed);
+        } else {
+          document.getElementById("typing-text").style.borderRight = "none"; // Hilangkan kursor setelah selesai
+        }
+      }
+    
+      window.onload = function () {
+        setTimeout(typeEffect, 500); // Tunggu 0.5 detik sebelum mulai
+      };
+    </script>
+    
+    <div class="image-gallery">
+      <img src="https://github.com/Kingfroze/Happy-Birthday-Sayang-/blob/main/Valentine/e0d05ee5-2166-49e7-b1e4-513bb7a3feb8.jpg" alt="Foto 1">
+      <img src="https://github.com/Kingfroze/Happy-Birthday-Sayang-/blob/main/Valentine/2ed1d39b-1ff2-414b-879d-c268d9e19f59.jpg" alt="Foto 2">
+      <img src="https://github.com/Kingfroze/Happy-Birthday-Sayang-/blob/main/Valentine/IMG_2065.jpg" alt="Foto 3">
+      <img src="https://github.com/Kingfroze/Happy-Birthday-Sayang-/blob/main/Valentine/572cfcde-6ea1-4921-9e6c-fd726b2c5d16.jpg" alt="Foto 4">
+      
+      <div class="gif-container gif-left">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2ZqYmJzeHlrYjF3b3UzeWIwNW5yeXlsN2xnZWNhZDMyN3M0aXh4eSZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/5xjreS3ZRvHTs4u8WL/giphy.gif" alt="GIF Kiri">
+      </div>
+      <div class="gif-container gif-right">
+        <img src="https://media.giphy.com/media/BiXQfMdTp8ddyXHoii/giphy.gif?cid=790b761146lgfkg5f4d8iq5w75vosv46gaalmxt1u6sqdkkp&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="GIF Kanan">
+      </div>
+
+  </div>
+    <img src="https://github.com/Kingfroze/Happy-Birthday-Sayang-/blob/main/Valentine/E4EF2195-A8EF-4EE3-9BB9-E2612ECC50B0-COLLAGE.JPG" alt="Ucapan Ulang Tahun">
+    <div class="message">
+      <p>
+        <span id="text">semogaa sehat selalu semua mimpi dedekk terwujud, Lovee youu dedekk🤍🤍</span>
+      </p>
+    </div>
+  </div>
+  <!-- Adding 8 photo slots with frames around the container -->
+  <div class="photo-slot slot1"><img src="https://github.com/Kingfroze/Happy-Birthday-Sayang-/blob/main/Valentine/IMG_4377.JPG" alt="Photo Slot"></div>
+  <div class="photo-slot slot2"><img src="https://github.com/Kingfroze/Happy-Birthday-Sayang-/blob/main/Valentine/FullSizeRender.jpg" alt="Photo Slot"></div>
+  <div class="photo-slot slot3"><img src="https://github.com/Kingfroze/Happy-Birthday-Sayang-/blob/main/Valentine/FullSizeRender(1).jpg" alt="Photo Slot"></div>
+  <div class="photo-slot slot4"><img src="https://github.com/Kingfroze/Happy-Birthday-Sayang-/blob/main/Valentine/FullSizeRender.jpg" alt="Photo Slot"></div>
+  <div class="photo-slot slot5"><img src="https://github.com/Kingfroze/Happy-Birthday-Sayang-/blob/main/Valentine/03515758-808c-4db0-9834-9f089b1a3272.JPG" alt="Photo Slot"></div>
+  <div class="photo-slot slot6"><img src="https://github.com/Kingfroze/Happy-Birthday-Sayang-/blob/main/Valentine/2ea1325a-fe5d-4492-a13a-5004b66e68e9.jpg" alt="Photo Slot"></div>
+  <div class="photo-slot slot7"><img src="https://github.com/Kingfroze/Happy-Birthday-Sayang-/blob/main/Valentine/0bd726bb-146c-4529-80b0-51f3f719d746.JPG" alt="Photo Slot"></div>
+  <div class="photo-slot slot8"><img src="https://github.com/Kingfroze/Happy-Birthday-Sayang-/blob/main/Valentine/186c2a42-424f-4bf5-8b2b-50693c6ca313.JPG" alt="Photo Slot"></div>
+</body>
+</html>
